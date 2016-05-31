@@ -6,7 +6,7 @@
   "dependencies": {
     "synaptic": "^1.0.4"
   },
-  "main": "main.js",
+  "main": "d.js",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
