@@ -53,7 +53,7 @@ Network.check = function (input, network) {
     const output = network.activate(input);
     console.log(
     `
-t: ${input[0]*10}, d: ${input[1]*10000},
+t: ${input[0]*10}, d: ${input[1]},
 output d: ${output[0]*1000000}, output s: ${output[1]*1000000}`
     );
 }

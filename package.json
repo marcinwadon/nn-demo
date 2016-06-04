@@ -4,6 +4,7 @@
   "author": "Marcin Wadon",
   "license": "MIT",
   "dependencies": {
+    "plotly": "^1.0.6",
     "synaptic": "^1.0.4"
   },
   "main": "d.js",

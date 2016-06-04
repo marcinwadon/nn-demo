@@ -10,7 +10,7 @@ const Network = require('./components/network');
 
 const options = {
     rate: [.5, .3,  .3, .1, .1],
-    iterations: 13500000,
+    iterations: 1350,//000000,
     error: .000001,
     shuffle: true,
     log: 100000,
@@ -73,11 +73,11 @@ console.log('Network saved in train/network.json file')
 /* Some results */
 console.log('\n*****');
 console.log('Train results:\n');
-Network.check([0.02, 0.001], network);
-Network.check([ 0.24, 0.4 ], network);
-Network.check([ 0.3, 0.39148 ], network);
+Network.check([ 0.02, 0.6 ], network);
+Network.check([ 0.24, 0.6 ], network);
+Network.check([ 0.3, 0.6 ], network);
 
-Network.check([ 0.03, 0.02], network);
-Network.check([ 0.4, 0.32 ], network);
-Network.check([ 0.23, 0.52 ], network);
-Network.check([ 0.15, 0.22 ], network);
+Network.check([ 0.03, 0.6 ], network);
+Network.check([ 0.4, 0.6 ], network);
+Network.check([ 0.23, 0.6 ], network);
+Network.check([ 0.15, 0.6 ], network);

@@ -12,6 +12,7 @@ TrainingSet.get = function (file) {
     );
 
     for (let item of data) {
+        item.d6 = .6;
         delete item.d10;
         delete item.dh10;
         delete item.sh10;
@@ -36,7 +37,7 @@ TrainingSet.createIO = function (data) {
 TrainingSet.normalize = function (data) {
     for (let item of data) {
         item.time /= 10;
-        item.d6 /= 10000;
+ //       item.d6 /= 10000;
         item.dh6 /= 1000000;
         item.sh6 /= 1000000;
     }
