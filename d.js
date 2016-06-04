@@ -10,7 +10,7 @@ const Network = require('./components/network');
 
 const options = {
     rate: [.5, .3,  .3, .1, .1],
-    iterations: 1350,//000000,
+    iterations: 1350000,//000,
     error: .000001,
     shuffle: true,
     log: 100000,

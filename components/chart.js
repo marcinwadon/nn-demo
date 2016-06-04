@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const credentials = JSON.parse(
-    fs.readFileSync(`components/secret.json`, `utf-8`)
+    fs.readFileSync('components/secret.json', 'utf-8')
 );
 const plotly = require('plotly')(credentials.username, credentials.apiKey);
 
@@ -29,6 +29,27 @@ Chart.generatePlotlyData = function (network) {
         y: [],
         mode: "lines+markers",
     };
+    let trace3 = {
+        x: [],
+        y: [],
+        mode: "markers",
+        type: "scatter",
+    }
+    let trace4 = {
+        x: [],
+        y: [],
+        mode: "markers",
+        type: "scatter",
+    }
+
+    let trainingSet = require('./trainingSet');
+    let ts = trainingSet.get('data/data.json');
+    for (let item of ts) {
+        trace3.x.push(item.time);
+        trace4.x.push(item.time);
+        trace3.y.push(item.dh6);
+        trace4.y.push(item.sh6);
+    }
 
     for (let i = 0; i < 50; i++) {
         let item = {};
@@ -46,7 +67,7 @@ Chart.generatePlotlyData = function (network) {
         trace2.y.push(item.sh6);
     }
 
-    return [trace1, trace2];
+    return [trace1, trace2, trace3, trace4];
 }
 
 Chart.generateData = function (network, file) {

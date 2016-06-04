@@ -2,9 +2,7 @@
 
 const fs = require('fs');
 
-let TrainingSet = {
-    normalize: 'a'
-};
+let TrainingSet = {};
 
 TrainingSet.get = function (file) {
     let data = JSON.parse(
